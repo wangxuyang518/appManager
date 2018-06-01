@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ui.main.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/include_head" android:id="@+id/head"/>
+            <com.youth.banner.Banner
+                android:id="@+id/mBanner"
+                app:indicator_height="8dp"
+                app:indicator_width="8dp"
+                app:indicator_margin="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+            </com.youth.banner.Banner>
+            <View
+                android:background="#E0E0E0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <android.support.v7.widget.RecyclerView
+                android:background="#ffffff"
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
